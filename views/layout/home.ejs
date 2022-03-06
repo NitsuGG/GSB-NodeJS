@@ -1,0 +1,24 @@
+<%- include("../blocs/header") %>
+
+<form class="ui form" action="/home" method="post">
+    <div class="field">
+        <label for="type_frais">Sélectionner un frais</label>
+        <select class="form-select" name="type_frais">
+            <option value="ETP">Forfait étape</option>
+            <option value="KM">Frais kilométrique</option>
+            <option value="NUI">Nuité</option>
+            <option value="REP">Repas</option>
+        </select>
+    </div>
+    <div class="field">
+        <label for="value_price">Valeur</label>
+        <input class="form-control" type="number" name="value_price" id="value_price">
+    </div>
+
+    <button class="ui blue labeled submit icon button">
+        <i class="icon check circle outline"></i> Envoyer
+    </button>
+</form>
+
+
+<%- include("../blocs/footer") %>

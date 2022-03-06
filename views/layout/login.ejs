@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/semantic/semantic.min.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <title>Connexion GSB</title>
+</head>
+<body>
+    <div class="ui main container">
+        <div class="ui main container">
+
+            <%if(locals.flash && locals.flash.error){ %>
+                <div class="ui negative message">
+                    <%= flash.error %>
+                </div>
+            <% } %>
+    
+            <%if(locals.flash && locals.flash.succes){ %>
+                <div class="ui positive message">
+                    <%= flash.succes %>
+                </div>
+            <% } %>
+
+
+            <div class="ui main container segment ">
+                <h1 class="text-center text-light">Connexion</h1>
+                <form action="/" method="post"  class="ui form black">
+                    <div class="field">
+                        <label for="login">Identifiant</label>
+                        <input type="text" name="login" id="login" placeholder="Identifiant" class="form-control">
+                    </div>
+                    <div class="field">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" name="password" id="password" placeholder="Mot de passe" class="form-control">
+                    </div>
+
+                    <button class="ui blue labeled submit icon button">
+                        <i class="icon check circle outline"></i> Envoyer
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<%- include("../blocs/header") %>
+
+<div class="ui container">
+    <form action="/historique" method="post" class="ui form">
+        <label for="month"></label>
+        <select class="form-select" name="month" onchange="this.form.submit()">
+
+            <% for(month of allUserMonth){ %>
+
+                <option value="0"> <%= month %></option>
+            <% } %>
+        </select>
+    </form>
+</div>
+
+<div class="ui grid ">
+    <div class="two column row">
+        <div class="column red">
+            <h3>Frais forfait :</h3>
+        </div>
+
+        <div class="column green">
+            <h3>Liste des frais hors forfait :</h3>
+        </div>
+    </div>
+</div>
+ 
+
+<%- include("../blocs/footer") %>

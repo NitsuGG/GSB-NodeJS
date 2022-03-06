@@ -11,7 +11,7 @@ class LoginModel{
             if( result[0] === undefined){
                 return cb(false)
             }else{
-                return cb(true)
+                return cb(result)
             }
         })
     }

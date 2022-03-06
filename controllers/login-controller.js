@@ -11,7 +11,10 @@ class LoginController{
                 request.flash('error', "Identifiant ou mot de passe incorecte")
                 response.redirect("/")
             }else{
+                console.log(result[0].id)
+                request.session.login = result[0].id
                 response.redirect("/home")
+
             }
         })
     }
